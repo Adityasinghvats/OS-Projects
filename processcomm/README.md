@@ -1,0 +1,8 @@
+- This repo is meant to be a code repo for the algorithms used for process synchronisation
+- How to prevent deadlocks, mutexes and semaphores.
+- consumer-producer is a buffer for producers to give info and consumer to take info, producer needs to know when to sleep and stop producing and consumer needs to know how to and when to stop consuming
+- buffer is a shared resource so there should be context sync between both, to prevent a situation where consumer and procucer both sleep.
+- CS - critical section.
+- Semaphores , mutex are kind of locks, conditional variable , use TSL (Test and set lock instruction) under the hood to user kernel to manage processes.
+- COnditional variable doesn't check for wakeup call continuously, thus saving clock cycles.
+- When a semaphore is working it disables hardware interrupts, which means semaphores are atomic
