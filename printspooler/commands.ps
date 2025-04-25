@@ -1,0 +1,19 @@
+//Powershell commands.
+
+// Check the status of the Print Spooler service
+Get-Service -Name Spooler
+
+// Stop the Print Spooler service
+Stop-Service -Name Spooler -Force
+
+// Start the Print Spooler service
+Start-Service -Name Spooler
+
+// Restart the Print Spooler service
+Restart-Service -Name Spooler
+
+// Get a list of print jobs in the queue
+Get-PrintJob -PrinterName "YOUR_PRINTER_NAME"
+
+// Remove all print jobs from a specific printer
+Get-PrintJob -PrinterName "YOUR_PRINTER_NAME" | Remove-PrintJob
